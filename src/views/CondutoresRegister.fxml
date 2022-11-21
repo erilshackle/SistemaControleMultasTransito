@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="496.0" prefWidth="330.0" spacing="10.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CondutoresRegisterController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #555;">
+         <children>
+            <Label layoutX="2.0" layoutY="16.0" prefHeight="0.0" prefWidth="300.0" text="Registrar Condutor" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Light" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="280.0" text="Pessoal">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" graphicTextGap="1.0" prefHeight="17.0" prefWidth="60.0" text="Nome">
+               <graphic>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+               </graphic></Label>
+            <TextField fx:id="txtNome" alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="240.0" promptText="Primeiro Nome" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" graphicTextGap="1.0" prefHeight="17.0" prefWidth="60.0" text="Apelido">
+               <graphic>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+               </graphic></Label>
+            <TextField fx:id="txtApelido" alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="240.0" promptText="Ultimo Nome" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" graphicTextGap="0.0" prefHeight="17.0" prefWidth="60.0" text="Género" />
+            <HBox prefWidth="240.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <RadioButton fx:id="rbSexoMasc" mnemonicParsing="false" prefHeight="18.0" prefWidth="110.0" selected="true" text="Masculino">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbSexoFem" mnemonicParsing="false" prefHeight="18.0" prefWidth="110.0" text="Feminino" toggleGroup="$sexo" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <children>
+            <Label contentDisplay="RIGHT" graphicTextGap="1.0" prefHeight="17.0" prefWidth="60.0" text="Ilha">
+               <graphic>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+               </graphic></Label>
+            <ComboBox fx:id="cbxIlha" prefHeight="25.0" prefWidth="240.0" promptText="Escolha uma Ilha" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" graphicTextGap="0.0" prefHeight="17.0" prefWidth="60.0" text="Endereço" />
+            <TextField fx:id="txtEndereco" alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="240.0" promptText="Cidade, Bairo" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" graphicTextGap="0.0" prefHeight="17.0" prefWidth="60.0" text="Idade" />
+            <Spinner fx:id="spIdade" editable="true" prefHeight="25.0" prefWidth="240.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="293.0" text="Licença">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <children>
+            <Label contentDisplay="RIGHT" graphicTextGap="1.0" prefHeight="17.0" prefWidth="60.0" text="Numero">
+               <graphic>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+               </graphic></Label>
+            <TextField fx:id="txtLicenca" prefHeight="25.0" prefWidth="210.0" promptText="número da licença" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label contentDisplay="RIGHT" graphicTextGap="1.0" prefWidth="80.0" text="Categoria">
+               <graphic>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+               </graphic></Label>
+            <HBox alignment="CENTER_LEFT" prefWidth="240.0" spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <CheckBox fx:id="ckbCatA" mnemonicParsing="false" text="A">
+                     <tooltip>
+                        <Tooltip text="Motocicletas" />
+                     </tooltip>
+                  </CheckBox>
+                  <CheckBox fx:id="ckbCatB" mnemonicParsing="false" text="B">
+                     <tooltip>
+                        <Tooltip text="Automóveis de peso menor que 3500kg e até 8 acentos" />
+                     </tooltip>
+                  </CheckBox>
+                  <CheckBox fx:id="ckbCatC" contentDisplay="CENTER" mnemonicParsing="false" text="C">
+                     <tooltip>
+                        <Tooltip text="Automóveis utilizados para transporte de mercadoria de peso até 3500kg" />
+                     </tooltip>
+                  </CheckBox>
+                  <CheckBox fx:id="ckbCatD" mnemonicParsing="false" text="D">
+                     <tooltip>
+                        <Tooltip text="Automóveis utilizados para transporte de pessoas com mais de 8 lugar" />
+                     </tooltip>
+                  </CheckBox>
+                  <CheckBox fx:id="ckbCatE" mnemonicParsing="false" text="E">
+                     <tooltip>
+                        <Tooltip text="Veiculos não incluidos nas categorias anteiores" />
+                     </tooltip>
+                  </CheckBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" spacing="10.0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="290.0" spacing="20.0">
+         <children>
+            <Label fx:id="lblMessage" prefHeight="53.0" prefWidth="195.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAdicionar" defaultButton="true" mnemonicParsing="false" onAction="#adcionarCondutor" text="Adicionar" />
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

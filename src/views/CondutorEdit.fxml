@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane cache="true" cacheHint="SPEED" focusTraversable="true" prefHeight="323.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CondutorEditController">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="300.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Nome completo" />
+                  <TextField fx:id="txtNome" alignment="CENTER_RIGHT" editable="false" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Gênero" />
+                  <HBox alignment="CENTER" prefHeight="18.0" prefWidth="170.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="rbHomem" mnemonicParsing="false" text="Homem">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupSexo" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbMulher" mnemonicParsing="false" text="Mulher" toggleGroup="$groupSexo" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Idade" />
+                  <Spinner fx:id="spnIdade" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Ilha" />
+                  <ComboBox fx:id="cbxIlha" prefHeight="25.0" prefWidth="167.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Morada" />
+                  <TextField fx:id="txtMorada" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblMessage" textFill="RED">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button fx:id="btnAtualizar" defaultButton="true" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
+            <Button fx:id="btnVoltar" cancelButton="true" mnemonicParsing="false" text="Voltar" />
+        </buttons>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+   <top>
+      <Pane style="-fx-background-color: #555;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" text="Perfil" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

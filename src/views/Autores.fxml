@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="335.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AutoresController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="335.0" style="-fx-background-color: #555;">
+         <children>
+            <Label alignment="CENTER" layoutY="26.0" prefHeight="29.0" prefWidth="335.0" text="Autores" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" disable="true" layoutX="20.0" layoutY="197.0" prefHeight="50.0" prefWidth="110.0" text="Aléxia Mendes">
+         <font>
+            <Font name="Courier" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <tooltip>
+            <Tooltip text="Documentação e acompanhamento geral do Projecto" />
+         </tooltip>
+      </Label>
+      <Label prefHeight="50.0" text="Erilando Carvalho" underline="true">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Courier" size="14.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Programação, Direção e Adminstração geral do Projecto" />
+         </tooltip>
+      </Label>
+      <Label layoutX="20.0" layoutY="125.0" prefHeight="50.0" text="Fábio Perreira">
+         <font>
+            <Font name="Courier" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <tooltip>
+            <Tooltip text="Documentação e auxilio no UML do Projecto" />
+         </tooltip>
+      </Label>
+      <Label layoutX="10.0" layoutY="161.0" prefHeight="50.0" text="Lenilson Lima" underline="true">
+         <font>
+            <Font name="Courier" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <tooltip>
+            <Tooltip text="Documentação, UML e auxilio no UI do Projecto" />
+         </tooltip>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</VBox>

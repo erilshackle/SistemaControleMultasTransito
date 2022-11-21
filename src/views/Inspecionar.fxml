@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane cache="true" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InspecionarController">
+   <left>
+      <VBox prefHeight="428.0" prefWidth="261.0" spacing="10.0" style="-fx-background-color: #555;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="10.0" prefHeight="50.0" prefWidth="260.0" text="Dados do Condutor" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="gphProfile" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <ColorAdjust brightness="1.0" />
+                     </effect>
+                     <image>
+                        <Image url="@../img/icons8-user_account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <HBox />
+            <TitledPane animated="false" collapsible="false" prefHeight="210.0" prefWidth="290.0" text="Pessoal" VBox.vgrow="ALWAYS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="288.0">
+                     <children>
+                        <VBox layoutX="21.4" layoutY="20.4" prefHeight="172.0" prefWidth="237.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Nome:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblName" text="name" underline="true" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Gênero:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblGender" contentDisplay="RIGHT" text="gender">
+                                       <graphic>
+                                          <ImageView fx:id="gphGender" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Idade">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblAge" text="age" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="27.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Ilha:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblIsland" text="island" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="44.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Morada:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblAddress" text="address" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="98.0" />
+                              <HBox alignment="CENTER" prefHeight="43.0" prefWidth="219.0">
+                                 <children>
+                                    <Button fx:id="btnEditar" alignment="CENTER" mnemonicParsing="false" onAction="#telaEditarCondutor" text="Editar">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-edit.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-identification_documents.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+            <TitledPane prefHeight="169.0" prefWidth="290.0" text="Licença" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="25.0" layoutY="8.0" prefHeight="82.0" prefWidth="288.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="Estado:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblState" text="state">
+                                       <graphic>
+                                          <ImageView fx:id="gphLicenceState" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-check_file.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="27.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="número:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblNumber" text="number">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-licence.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="44.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="70.0" text="categorias:">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCategories" text="categories">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-car.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="98.0" />
+                              <HBox alignment="CENTER" prefHeight="55.0" prefWidth="219.0">
+                                 <children>
+                                    <Button fx:id="btnAtivarLicenca" mnemonicParsing="false" onAction="#ativarLicenca" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: #FA7;" text="Reabilitar Licença">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-police_badge.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-driver_license.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="260.0" text="Registros de Multas" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-ticket.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TableView fx:id="tblMultas" onMouseClicked="#selectMulta" prefHeight="202.0" prefWidth="359.0">
+              <columns>
+                <TableColumn fx:id="colData" editable="false" prefWidth="90.0" resizable="false" text="Data" />
+                <TableColumn fx:id="colPontos" editable="false" minWidth="7.0" prefWidth="30.0" resizable="false" text="Pts" />
+                  <TableColumn fx:id="colValor" editable="false" minWidth="40.0" prefWidth="87.0" resizable="false" text="Valor" />
+                  <TableColumn fx:id="colAtraso" editable="false" prefWidth="53.0" resizable="false" text="Atraso" />
+                  <TableColumn fx:id="colEstado" editable="false" prefWidth="91.0" resizable="false" text="Estado" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="310.0" spacing="4.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="272.0" text="Pontos total acumulados:" HBox.hgrow="SOMETIMES">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPoints" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="60.0">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="pts">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="310.0" spacing="4.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="246.0" text="Valor total a pagar:" HBox.hgrow="SOMETIMES">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPayment" alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="81.0">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="ECV">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnAdicionarMulta" mnemonicParsing="false" onAction="#telaAdicionarMulta" prefHeight="25.0" prefWidth="260.0" style="-fx-background-color: #666;" text="Aplicar Multa" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-ticket.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="0.67" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnDetalhesMulta" disable="true" mnemonicParsing="false" onAction="#telaDetalhesMulta" prefHeight="25.0" prefWidth="260.0" text="Detalhes e Pagamento">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-pay.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
